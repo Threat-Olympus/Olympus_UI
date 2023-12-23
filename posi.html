@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/posi.css">
+    <title>Threat Olympus</title>
+</head>
+<body>
+    <header>
+        <img src="images/posi.png" alt="POSEIDEN">
+        <h2>POSEIDEN<br>Network Threat Hunter</h2>
+    </header>
+    <hr style="border: none; border-top: 3px solid black;">
+    <desc>
+        <h3>Introduction:</h3>
+        <p>
+            Poseiden is a network-level threat hunter that uses a rule engine to assist it identify uncertain patterns<br>
+            in networks while keeping an eye out for any suspicious activity.
+        </p>
+        <h3>Usage:</h3>
+        <p>
+            - You have to select the Interface on which you want to run Poseiden.<br>
+            - You can type your rules or can upload text file containing rules here
+        </p>
+        <form id="ruleForm" action="">
+            <label for="interfaceCard">Select Interface Card:</label>
+            <select id="interfaceCard" name="interfaceCard">
+              <option value="eth0">eth0</option>
+              <option value="eth1">eth1</option>
+              <option value="wlan0">wlan0</option>
+              <option value="wlan1">wlan1</option>
+            </select>
+        
+            <label for="rules">Enter Rules:</label>
+            <textarea id="rules" name="rules" placeholder="Write your rules here" required></textarea>
+        
+            <label for="ruleFile">Upload Rule File:</label><br>
+            <input type="file" id="ruleFile" name="ruleFile" accept=".txt">
+            <br>
+            <button type="submit">Submit</button>
+    </desc>
+</body>
+</html>
